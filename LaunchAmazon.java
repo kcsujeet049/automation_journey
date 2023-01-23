@@ -15,5 +15,7 @@ public class LaunchAmazon {
         chDriver.manage().window().maximize();
 
         LibraryUtils.isElementVisible(chDriver, chDriver.findElement(By.id("twotabsearchtextbox")), Duration.ofSeconds(10)).sendKeys("Apple iPhone");
+
+        LibraryUtils.isElementClickable(chDriver, chDriver.findElement(By.id("nav-search-submit-button")), Duration.ofSeconds(10)).click();
     }
 }
