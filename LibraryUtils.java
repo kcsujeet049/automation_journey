@@ -17,5 +17,10 @@ public class LibraryUtils {
         return webElement;
     }
 
+    public static WebElement isElementClickable(WebDriver driver, WebElement element, Duration timeout) {
+        WebDriverWait waitDriver = new WebDriverWait(driver, timeout);
+        WebElement webElement = waitDriver.until(ExpectedConditions.elementToBeClickable(element));
+        return webElement;
+    }
 
 }
